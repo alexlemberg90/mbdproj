@@ -7,7 +7,7 @@ const initialState = {
     loading: false,
     error: null,
     search: []
-}
+};
 
 const getMovies = createAsyncThunk(
     'movieSlice/getMovies',
@@ -24,6 +24,7 @@ const getMovies = createAsyncThunk(
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
+    reducers:{},
     extraReducers: builder =>
         builder
             .addCase(getMovies.fulfilled, (state, action) => {
@@ -40,7 +41,6 @@ const movieSlice = createSlice({
 });
 
 const {reducer: movieReducer} = movieSlice;
-console.log(movieSlice.reducer)
 
 const movieActions = {
     getMovies
