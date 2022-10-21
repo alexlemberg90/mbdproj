@@ -22,9 +22,12 @@ export default function Movies() {
     };
 
     return (<div className={styles.listWrapper}>
+
             {loading && <h1>LOADING</h1>}
-            {error && <h1>errrrr</h1>}
-            {results && results.map(movie => <div className={styles.filmItem} key={movie.id} onClick={()=> onMovieClick(movie)}><Movie key={movie.id} movie={movie}/>
+            {error && <h1>error</h1>}
+            {results && results.map(movie => <div className={styles.filmItem} key={movie.id}
+                                                  onClick={() => onMovieClick(movie)}><Movie key={movie.id}
+                                                                                             movie={movie}/>
             </div>)}
         </div>
     );
