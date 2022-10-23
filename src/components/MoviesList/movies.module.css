@@ -1,9 +1,0 @@
-.listWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.filmItem {
-    width: 30%;
-    height: 50%;
-}

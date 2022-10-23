@@ -1,19 +1,26 @@
 import './App.css';
 import {Route, Routes} from "react-router-dom";
-import Movies from "./components/MoviesList/Movies";
-import BaseLayout from "./layouts/BaseLayout";
-import MovieInfo from "./components/MovieInfo/MovieInfo";
+
+
+import {Baselayout} from "./components";
+import Main from "./components/main/Main";
+import Movie from "./components/movies/Movie";
+import GenresMovies from "./components/genresMovies/GenresMovies";
+
 
 function App() {
 
     return (
-        <BaseLayout>
+        <Baselayout>
             <Routes>
-                <Route path={"/"} element={<Movies/>}/>
+                <Route path="/" element={<Main />}/>
 
-                <Route path={"/movie/:id"} element={<MovieInfo/>}/>
+                <Route path="/movies/:id" element={ <Movie/>}/>
+
+                <Route path="/genresMovie/:id" element={<GenresMovies/>}/>
+
             </Routes>
-        </BaseLayout>
+        </Baselayout>
 
 
     );

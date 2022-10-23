@@ -1,3 +1,2 @@
-export * from './urls';
-export * from './movies.service/moviesService';
-export * from './axios.service/axiosService';
+export * from './genres.service';
+export * from './movie.service';
