@@ -15,11 +15,11 @@ export default function Movie() {
 
     useEffect(() => {
         moviesService.getMovieDetails(id).then((results) => dispatch(movieActions.getMovie(results)))
-    }, [movie, id]);
+    }, [id]);
     const onGenreFilmClick = (id) => {
         navigate(`/genresMovie/${id}`)
     };
-    console.log(movie)
+
     return (
         (movie != null && <div className={'movie'}>
             <div>

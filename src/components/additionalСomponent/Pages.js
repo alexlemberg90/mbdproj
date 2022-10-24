@@ -1,29 +1,27 @@
-import {useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
-import {moviesService} from "../../services";
+import {useNavigate} from "react-router-dom";
+
 import {movieActions} from "../../redux";
 
 export default function Pages() {
-    const {register, handleSubmit, formState: {isValid}} = useForm()
+    const {register, handleSubmit} = useForm();
     const dispatch = useDispatch();
-    const page = 2;
-    useEffect(() => {
-    moviesService.getPages(page).then((results) => dispatch(movieActions.getMovies(results)))
-    }, []);
+    const navigate = useNavigate()
 
-    const search = async () => {
 
+    const pagesInput = ({page}) => {
+        dispatch(movieActions.getPage(page))
+        navigate('/')
     }
 
+
     return (<div>
-            <form onSubmit={handleSubmit(search)}>
-                <button>Prev</button>
-                <input type="number" placeholder={'movie'} {...register('movie')}/>
-                <button disabled={!isValid}>Next</button>
-
-
+            <form onSubmit={handleSubmit(pagesInput)}>
+                <input type="number" placeholder={'page'} {...register('page')} min="1" max="500"/>
+                <button>Page</button>
             </form>
+
         </div>
     );
 }

@@ -1,11 +1,14 @@
 import React from "react";
 import styles from './BaseLoyout.module.css';
 import {useNavigate} from "react-router-dom";
+
 import logo from '../../images/main.png';
 import DropMenu from "../additionalСomponent/dropdown/DropMenu";
 import Pages from "../additionalСomponent/Pages";
+import Finder from '../additionalСomponent/Finder'
 
-export const Baselayout = ({children}) =>{
+
+export const BaseLayout = ({children}) => {
 
     const navigate = useNavigate()
 
@@ -18,7 +21,7 @@ export const Baselayout = ({children}) =>{
             <header>
                 <DropMenu/>
                 <img className={'mainImg'} onClick={toHome} src={logo} alt={'main logo'}/>
-                <div>Finder</div>
+                <Finder/>
             </header>
             <main>
                 {children}
