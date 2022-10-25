@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import GenreMovies from "./GenreMovies";
 import {useDispatch, useSelector} from "react-redux";
+
+import GenreMovies from "./GenreMovies";
 import {genresActions} from "../../redux/slices/genresSlice";
 import {moviesService} from "../../services";
 

@@ -6,7 +6,7 @@ const initialState = {
     movie: null,
     loading: false,
     error: null,
-    search: '',
+    search: [],
     page: 1
 };
 
@@ -22,16 +22,20 @@ const movieSlice = createSlice({
         },
         getPage: (state, action) => {
             state.page = action.payload
+        },
+        searchPage: (state, action) => {
+            state.search = action.payload
         }
     }
 });
 
-const {reducer: movieReducer, actions: {getMovie, getMovies, getPage}} = movieSlice;
+const {reducer: movieReducer, actions: {getMovie, getMovies, getPage, searchPage}} = movieSlice;
 
 const movieActions = {
     getMovies,
     getMovie,
-    getPage
+    getPage,
+    searchPage
 };
 
 export {

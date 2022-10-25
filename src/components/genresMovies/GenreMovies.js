@@ -1,5 +1,6 @@
 import React from "react";
 import {Button, Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
+
 import Stars from "../StarsRating/Stars";
 
 export default function GenreMovies({results, onFilmClick}) {

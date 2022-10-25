@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import logo from '../../images/main.png';
 import DropMenu from "../additionalСomponent/dropdown/DropMenu";
 import Pages from "../additionalСomponent/Pages";
-import Finder from '../additionalСomponent/Finder'
+import Finder from '../additionalСomponent/finder/Finder'
 
 
 export const BaseLayout = ({children}) => {

@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
 });
 
 const setupStore = () => configureStore({
-    reducer:rootReducer
+    reducer: rootReducer
 });
 
 export {
