@@ -26,7 +26,7 @@ export default function Main() {
     });
 
     useEffect(() => {
-        moviesService.getMovies(page).then(({results}) => dispatch(movieActions.getMovies(results)))
+        moviesService.getMovies(page).then((data) => dispatch(movieActions.getMovies(data)))
 
     }, [page,movies]);
     useEffect(() => {

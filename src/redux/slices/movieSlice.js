@@ -7,7 +7,8 @@ const initialState = {
     loading: false,
     error: null,
     search: [],
-    page: 1
+    page: 1,
+    totalPages: 1
 };
 
 const movieSlice = createSlice({
@@ -18,7 +19,8 @@ const movieSlice = createSlice({
             state.movie = action.payload
         },
         getMovies: (state, action) => {
-            state.movies = action.payload
+            state.movies = action.payload.results
+            state.totalPages = action.payload.total_pages
         },
         getPage: (state, action) => {
             state.page = action.payload

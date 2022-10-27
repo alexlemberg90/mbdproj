@@ -5,9 +5,10 @@ import Stars from "../StarsRating/Stars";
 
 export default function Movies({movies, onFilmClick, onGenreFilmClick}) {
     const {original_title, overview, release_date, vote_average, vote_count, poster_path, movieGenresList} = movies;
-
+    
     return (
         <div className={'movies'}>
+
             <Card>
                 <CardImg src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`${original_title} poster`}
                          onClick={() => onFilmClick(movies)}/>
@@ -22,6 +23,7 @@ export default function Movies({movies, onFilmClick, onGenreFilmClick}) {
                     <Button onClick={() => onFilmClick(movies)}>Movie Details</Button>
                 </CardBody>
             </Card>
+
         </div>
     );
 }

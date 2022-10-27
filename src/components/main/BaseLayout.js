@@ -6,6 +6,7 @@ import logo from '../../images/main.png';
 import DropMenu from "../additionalСomponent/dropdown/DropMenu";
 import Pages from "../additionalСomponent/Pages";
 import Finder from '../additionalСomponent/finder/Finder'
+import DarkModeToggle from "../additionalСomponent/darkModeToggle/DarkModeToggle";
 
 
 export const BaseLayout = ({children}) => {
@@ -18,8 +19,10 @@ export const BaseLayout = ({children}) => {
 
     return (
         <div className={styles.mainWrapper}>
+
             <header>
                 <DropMenu/>
+                <DarkModeToggle/>
                 <img className={'mainImg'} onClick={toHome} src={logo} alt={'main logo'}/>
                 <Finder/>
             </header>

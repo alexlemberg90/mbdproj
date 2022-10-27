@@ -8,7 +8,6 @@ import Movie from "./components/movies/Movie";
 import GenresMovies from "./components/genresMovies/GenresMovies";
 import FinderPage from "./components/additionalСomponent/finder/FinderPage";
 
-
 function App() {
 
     return (
